@@ -1,3 +1,3 @@
 ## Welcome to GitHub Pages
 
-https://joeycurry.github.io/webTest/
+http://www.yikedacong.com/
