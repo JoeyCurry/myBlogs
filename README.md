@@ -2,4 +2,4 @@
 
 基于VuePress
 
-http://www.yikedacong.com
+个人博客 || 转载、评价 || GitHub精选
