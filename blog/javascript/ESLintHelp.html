@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>BearTeam | ESLint 使用帮助</title>
+    <meta name="description" content="来一起坐下来谈谈情，聊聊天">
+    <link rel="icon" href="/img/favicon.ico">
+    
+    <link rel="preload" href="/assets/css/0.styles.4681c589.css" as="style"><link rel="preload" href="/assets/js/app.2cf98de4.js" as="script"><link rel="preload" href="/assets/js/58.2a772906.js" as="script"><link rel="preload" href="/assets/js/67.f97f45b7.js" as="script"><link rel="preload" href="/assets/js/63.8f38d3cd.js" as="script"><link rel="prefetch" href="/assets/js/34.dc973523.js"><link rel="prefetch" href="/assets/js/1.9b886dd4.js"><link rel="prefetch" href="/assets/js/2.3aee1699.js"><link rel="prefetch" href="/assets/js/3.49e9d645.js"><link rel="prefetch" href="/assets/js/4.7e12c71c.js"><link rel="prefetch" href="/assets/js/5.3f24f657.js"><link rel="prefetch" href="/assets/js/6.67986753.js"><link rel="prefetch" href="/assets/js/7.3bda39a5.js"><link rel="prefetch" href="/assets/js/8.0c4c9298.js"><link rel="prefetch" href="/assets/js/9.98004a0c.js"><link rel="prefetch" href="/assets/js/10.31719261.js"><link rel="prefetch" href="/assets/js/11.4e3aaf08.js"><link rel="prefetch" href="/assets/js/12.d9d71609.js"><link rel="prefetch" href="/assets/js/13.54a4a0ba.js"><link rel="prefetch" href="/assets/js/14.0f1e0bf8.js"><link rel="prefetch" href="/assets/js/15.387f7dbb.js"><link rel="prefetch" href="/assets/js/16.f7013ebe.js"><link rel="prefetch" href="/assets/js/17.15ae21b6.js"><link rel="prefetch" href="/assets/js/18.b40f83d7.js"><link rel="prefetch" href="/assets/js/19.f9cc90fa.js"><link rel="prefetch" href="/assets/js/20.55f23221.js"><link rel="prefetch" href="/assets/js/21.9ad883db.js"><link rel="prefetch" href="/assets/js/22.2edd099b.js"><link rel="prefetch" href="/assets/js/23.5a0919c4.js"><link rel="prefetch" href="/assets/js/24.f6fbc142.js"><link rel="prefetch" href="/assets/js/25.cadc4641.js"><link rel="prefetch" href="/assets/js/26.230e67bb.js"><link rel="prefetch" href="/assets/js/27.21fecf12.js"><link rel="prefetch" href="/assets/js/28.d9a54519.js"><link rel="prefetch" href="/assets/js/29.02923daf.js"><link rel="prefetch" href="/assets/js/30.57e90e31.js"><link rel="prefetch" href="/assets/js/31.ef0ac06a.js"><link rel="prefetch" href="/assets/js/32.843c917d.js"><link rel="prefetch" href="/assets/js/33.4fa47da8.js"><link rel="prefetch" href="/assets/js/35.d4b7d76f.js"><link rel="prefetch" href="/assets/js/36.65a7de82.js"><link rel="prefetch" href="/assets/js/37.0f52ca47.js"><link rel="prefetch" href="/assets/js/38.c1f8af50.js"><link rel="prefetch" href="/assets/js/39.19c1149f.js"><link rel="prefetch" href="/assets/js/40.14fd5a09.js"><link rel="prefetch" href="/assets/js/41.aca639b3.js"><link rel="prefetch" href="/assets/js/42.579f968c.js"><link rel="prefetch" href="/assets/js/43.f5aea9c2.js"><link rel="prefetch" href="/assets/js/44.7e985a95.js"><link rel="prefetch" href="/assets/js/45.55496324.js"><link rel="prefetch" href="/assets/js/46.26bc2a94.js"><link rel="prefetch" href="/assets/js/47.29221708.js"><link rel="prefetch" href="/assets/js/48.a028dd11.js"><link rel="prefetch" href="/assets/js/49.0c9f6fe6.js"><link rel="prefetch" href="/assets/js/50.5cd894e6.js"><link rel="prefetch" href="/assets/js/51.12d3c506.js"><link rel="prefetch" href="/assets/js/52.810b9755.js"><link rel="prefetch" href="/assets/js/53.6ecab745.js"><link rel="prefetch" href="/assets/js/54.4bc15c07.js"><link rel="prefetch" href="/assets/js/55.1601360c.js"><link rel="prefetch" href="/assets/js/56.d5497805.js"><link rel="prefetch" href="/assets/js/57.6407f5c9.js"><link rel="prefetch" href="/assets/js/59.bd2410ca.js"><link rel="prefetch" href="/assets/js/60.32555bfb.js"><link rel="prefetch" href="/assets/js/61.8868c8d0.js"><link rel="prefetch" href="/assets/js/62.c43174af.js"><link rel="prefetch" href="/assets/js/64.a1acbd8d.js"><link rel="prefetch" href="/assets/js/65.32575f1c.js"><link rel="prefetch" href="/assets/js/66.96ec6745.js"><link rel="prefetch" href="/assets/js/68.2f51d849.js"><link rel="prefetch" href="/assets/js/69.19bb4017.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.4681c589.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div><a href="/" class="home-link router-link-active"><!----><span class="site-name">
+      BearTeam
+    </span></a><div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""><!----></div><nav class="nav-links can-hide"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">Blog</a></div><div class="nav-item"><a href="/components/" class="nav-link">华图组件库</a></div><div class="nav-item"><a href="/functions/" class="nav-link">华图方法库</a></div><div class="nav-item"><a href="/github/" class="nav-link">GitHub精选</a></div><div class="nav-item"><a href="/weekly/" class="nav-link">Bear周刊</a></div><div class="nav-item"><a href="/aboutUS/" class="nav-link">About US</a></div><!----></nav></div></header><div class="sidebar-mask"></div><div class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/blog/" class="nav-link router-link-active">Blog</a></div><div class="nav-item"><a href="/components/" class="nav-link">华图组件库</a></div><div class="nav-item"><a href="/functions/" class="nav-link">华图方法库</a></div><div class="nav-item"><a href="/github/" class="nav-link">GitHub精选</a></div><div class="nav-item"><a href="/weekly/" class="nav-link">Bear周刊</a></div><div class="nav-item"><a href="/aboutUS/" class="nav-link">About US</a></div><!----></nav><ul class="sidebar-links"><li><div class="sidebar-group first collapsable"><p class="sidebar-heading open"><span>博客</span><span class="arrow down"></span></p><ul class="sidebar-group-items"><li><a href="/blog/" class="sidebar-link">博客列表</a></li><li><a href="/blog/javascript/" class="sidebar-link">JavaScript</a></li><li><a href="/blog/ued/" class="sidebar-link">UED</a></li><li><a href="/blog/life/" class="sidebar-link">吃喝玩乐</a></li><li><a href="/blog/other/" class="sidebar-link">其他</a></li></ul></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>github精选</span><span class="arrow right"></span></p><!----></div></li><li><div class="sidebar-group collapsable"><p class="sidebar-heading"><span>Bear周刊</span><span class="arrow right"></span></p><!----></div></li><li><a href="/aboutUS/" class="sidebar-link">关于我们</a></li></ul></div><div class="page"><div class="content"><h3 id="eslint-使用帮助"><a href="#eslint-使用帮助" aria-hidden="true" class="header-anchor">#</a> ESLint 使用帮助</h3><div class="title-container">
+    江军 2018-05-03 16:10
+</div><p><div class="tag-container">
+    javascript
+</div></p><p><div class="tag-container-unclick">
+    eslint
+</div></p><p><div class="tag-container-unclick">
+    代码规范
+</div></p><br clear="both"><h4 id="推荐使用vscode，本文档使用vscode进行说明，其他编辑器自行处理"><a href="#推荐使用vscode，本文档使用vscode进行说明，其他编辑器自行处理" aria-hidden="true" class="header-anchor">#</a> 推荐使用<code>VSCode</code>，本文档使用<code>VSCode</code>进行说明，其他编辑器自行处理</h4><h4 id="规则使用eslint-config-alloy规范，如对此规范不了解可点击这里查看"><a href="#规则使用eslint-config-alloy规范，如对此规范不了解可点击这里查看" aria-hidden="true" class="header-anchor">#</a> 规则使用<code>eslint-config-alloy</code>规范，如对此规范不了解<a href="https://github.com/AlloyTeam/eslint-config-alloy" target="_blank" rel="noopener noreferrer">可点击这里查看</a></h4><hr><p>1.在扩展中安装ESLint插件</p><p>2.添加<code>eslint-config-alloy</code></p><pre class="language-javascript"><code>npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev eslint babel<span class="token operator">-</span>eslint eslint<span class="token operator">-</span>config<span class="token operator">-</span>alloy
+
+<span class="token keyword">with</span> vue<span class="token punctuation">:</span>
+
+npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev eslint babel<span class="token operator">-</span>eslint vue<span class="token operator">-</span>eslint<span class="token operator">-</span>parser@<span class="token number">2.0</span><span class="token number">.1</span><span class="token operator">-</span>beta<span class="token punctuation">.</span><span class="token number">2</span> eslint<span class="token operator">-</span>plugin<span class="token operator">-</span>vue@<span class="token number">3</span> eslint<span class="token operator">-</span>config<span class="token operator">-</span>alloy
+
+<span class="token keyword">with</span> TypeScript
+
+npm install <span class="token operator">--</span>save<span class="token operator">-</span>dev eslint typescript typescript<span class="token operator">-</span>eslint<span class="token operator">-</span>parser eslint<span class="token operator">-</span>plugin<span class="token operator">-</span>typescript eslint<span class="token operator">-</span>config<span class="token operator">-</span>alloy
+
+</code></pre><p>3.添加<code>.eslintrc</code>和<code>.eslintignore</code>文件</p><p>.eslintrc:</p><pre class="language-javascript"><code>module<span class="token punctuation">.</span>exports <span class="token operator">=</span> <span class="token punctuation">{</span>
+    <span class="token keyword">extends</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token comment">//'eslint-config-alloy',</span>
+        <span class="token comment">// 如果是vue则使用这个</span>
+        <span class="token comment">//'eslint-config-alloy/vue',</span>
+        <span class="token comment">// 如果是react则使用这个</span>
+        <span class="token comment">//'eslint-config-alloy/react'</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    globals<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+        <span class="token comment">// 这里填入你的项目需要的全局变量</span>
+        <span class="token comment">// 这里值为 false 表示这个全局变量不允许被重新赋值，比如：</span>
+        <span class="token comment">//</span>
+        <span class="token comment">// jQuery: false,</span>
+        <span class="token comment">// $: false</span>
+    <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    rules<span class="token punctuation">:</span> <span class="token punctuation">{</span>
+    	<span class="token comment">// 推荐新项目不要打开规则，尽量去适应这份规则</span>
+        <span class="token comment">// &quot;vue/order-in-components&quot;: &quot;off&quot;,</span>
+        <span class="token comment">// 关闭强制使用&quot;===&quot;</span>
+        <span class="token comment">// &quot;eqeqeq&quot;: [&quot;off&quot;],</span>
+        <span class="token comment">// 关闭函数名前空格检测</span>
+        <span class="token comment">// &quot;space-before-function-paren&quot;: ['off'],</span>
+        <span class="token comment">// 允许使用for-in</span>
+        <span class="token string">&quot;guard-for-in&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span><span class="token string">'off'</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+        <span class="token comment">// debugger</span>
+        <span class="token comment">// &quot;no-debugger&quot;: ['off']</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><p>.eslintignore:</p><pre class="language-javascript"><code><span class="token operator">/</span>build
+<span class="token operator">/</span>dist
+<span class="token operator">...</span>不使用规则检查的文件
+</code></pre><p>4.在<code>VSCode</code>设置里打开eslint检查与保存时自动修复</p><pre class="language-javascript"><code>    <span class="token string">&quot;eslint.autoFixOnSave&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;eslint.validate&quot;</span><span class="token punctuation">:</span> <span class="token punctuation">[</span>
+        <span class="token string">&quot;javascript&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;javascriptreact&quot;</span><span class="token punctuation">,</span>
+        <span class="token string">&quot;html&quot;</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;vue&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;autoFix&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;typescript&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;autoFix&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">{</span>
+            <span class="token string">&quot;language&quot;</span><span class="token punctuation">:</span> <span class="token string">&quot;typescriptreact&quot;</span><span class="token punctuation">,</span>
+            <span class="token string">&quot;autoFix&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token string">&quot;eslint.enable&quot;</span><span class="token punctuation">:</span> <span class="token boolean">true</span>
+</code></pre><p>5.如果某些代码不想使用某些规则来规范，可以在代码前添加注释，例如：</p><pre class="language-javascript"><code><span class="token comment">/* eslint-disable no-new */</span>
+	
+或
+	
+<span class="token comment">/* eslint-disable */</span>
+</code></pre><p>6.推荐不要分号（<a href="http://inimino.org/~inimino/blog/javascript_semicolons" target="_blank" rel="noopener noreferrer">英文好可以看这篇讲解</a>）。</p><p>7.推荐使用eslint来规范代码，对于多人合作开发，极大的提高工作效率，不用去阅读“烂代码”是多么的清爽。推荐尽量去适应这份规则，如果配置不好，也可以参考<a href="http://www.alloyteam.com/2017/08/13065/" target="_blank" rel="noopener noreferrer">AlloyTeam ESLint 配置指南</a></p></div><!----><!----></div></div></div>
+    <script src="/assets/js/58.2a772906.js" defer></script><script src="/assets/js/67.f97f45b7.js" defer></script><script src="/assets/js/63.8f38d3cd.js" defer></script><script src="/assets/js/app.2cf98de4.js" defer></script>
+  </body>
+</html>
